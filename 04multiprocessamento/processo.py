@@ -1,3 +1,4 @@
+from typing import Union
 import multiprocessing
 
 print(
@@ -5,12 +6,12 @@ print(
 )
 
 
-def faz_algo(valor):
+def faz_algo(valor: Union[str, int, float]) -> None:
     print(f'Fazendo algo com o {valor}')
 
 
-def main():
-    pc = multiprocessing.Process(
+def main() -> None:
+    pc: multiprocessing.Process = multiprocessing.Process(
         target=faz_algo,
         args=('Passáro',),
         name='Processo Geek'  # Sem o name = Process-1
