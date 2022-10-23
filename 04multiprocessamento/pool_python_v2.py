@@ -2,7 +2,7 @@ import multiprocessing
 
 
 def calcular_v1(dado: int) -> int:
-    return dado ** 2
+    return dado**2
 
 
 def calcular_v2(dado: int) -> float:
@@ -22,8 +22,7 @@ def main() -> None:
     print(f'Tamanho da Pool: {tamanho_pool}')
 
     pool: multiprocessing.pool.Pool = multiprocessing.Pool(
-        processes=tamanho_pool,
-        initializer=imprimir_nome_processo
+        processes=tamanho_pool, initializer=imprimir_nome_processo
     )
 
     entradas: list = list(range(7))

@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pcap"
+version = "0.1.0"
+description = ""
+authors = ["davilos <daviloscostagg@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+snakeviz = "^2.1.1"
+blue = "^0.9.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

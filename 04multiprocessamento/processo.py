@@ -14,7 +14,7 @@ def main() -> None:
     pc: multiprocessing.Process = multiprocessing.Process(
         target=faz_algo,
         args=('Passáro',),
-        name='Processo Geek'  # Sem o name = Process-1
+        name='Processo Geek',  # Sem o name = Process-1
     )
 
     print(f'Iniciando o processo com nome: {pc.name}')

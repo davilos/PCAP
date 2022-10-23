@@ -13,8 +13,10 @@ def main() -> None:
 
     [th.start() for th in threads]
 
-    print('Podemos fazer outras coisas no programa enquanto '
-          'a thread vai executando.')
+    print(
+        'Podemos fazer outras coisas no programa enquanto '
+        'a thread vai executando.'
+    )
     print('Geek university ' * 2)
 
     [th.join() for th in threads]
@@ -23,7 +25,7 @@ def main() -> None:
 
 
 def contar(o_que: str, num: int) -> None:
-    for n in range(1, num+1):
+    for n in range(1, num + 1):
         print(f'{n} {o_que}(s)...')
         time.sleep(1)
 

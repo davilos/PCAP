@@ -12,14 +12,8 @@ def sacar(saldo: int) -> None:
 
 
 def realizar_transacoes(saldo: int) -> None:
-    pc1 = multiprocessing.Process(
-        target=depositar,
-        args=(saldo,)
-    )
-    pc2 = multiprocessing.Process(
-        target=sacar,
-        args=(saldo,)
-    )
+    pc1 = multiprocessing.Process(target=depositar, args=(saldo,))
+    pc2 = multiprocessing.Process(target=sacar, args=(saldo,))
 
     pc1.start()
     pc2.start()

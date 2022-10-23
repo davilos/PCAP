@@ -22,7 +22,7 @@ produtos = [
 
 @app.get('/')
 async def index():
-    return {"Geek": "Dávilos"}
+    return {'Geek': 'Dávilos'}
 
 
 @app.get('/produtos/{id}')

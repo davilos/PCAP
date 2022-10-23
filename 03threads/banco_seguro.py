@@ -8,7 +8,6 @@ lock = threading.RLock()
 
 
 class Conta:
-
     def __init__(self, saldo: int = 0) -> None:
         self.saldo = saldo
 
@@ -27,7 +26,7 @@ def main() -> None:
         threading.Thread(target=servicos, args=(contas, total)),
         threading.Thread(target=servicos, args=(contas, total)),
         threading.Thread(target=servicos, args=(contas, total)),
-        threading.Thread(target=servicos, args=(contas, total))
+        threading.Thread(target=servicos, args=(contas, total)),
     ]
 
     [tarefa.start() for tarefa in tarefas]
@@ -52,7 +51,7 @@ def criar_contas() -> List[Conta]:
         Conta(saldo=random.randint(5_000, 10_000)),
         Conta(saldo=random.randint(5_000, 10_000)),
         Conta(saldo=random.randint(5_000, 10_000)),
-        Conta(saldo=random.randint(5_000, 10_000))
+        Conta(saldo=random.randint(5_000, 10_000)),
     ]
 
 
@@ -73,12 +72,13 @@ def valida_banco(contas: List[Conta], total: int) -> None:
     if atual != total:
         print(
             '\033[31mERRO: Balanço bancário inconsistente. '
-            f'BRL$ {atual:.2f} vs {total:.2f}\033[m', flush=True
+            f'BRL$ {atual:.2f} vs {total:.2f}\033[m',
+            flush=True,
         )
     else:
         print(
-            'Tudo certo: Balanço báncario consistente. '
-            f'BRL$ {total:.2f}', flush=True
+            'Tudo certo: Balanço báncario consistente. ' f'BRL$ {total:.2f}',
+            flush=True,
         )
 
 

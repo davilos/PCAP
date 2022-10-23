@@ -14,12 +14,10 @@ def main() -> None:
     conn1, conn2 = multiprocessing.Pipe(True)
 
     p1: multiprocessing.Process = multiprocessing.Process(
-        target=ping,
-        args=(conn1,)
+        target=ping, args=(conn1,)
     )
     p2: multiprocessing.Process = multiprocessing.Process(
-        target=pong,
-        args=(conn2,)
+        target=pong, args=(conn2,)
     )
 
     p1.start()

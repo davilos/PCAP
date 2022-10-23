@@ -34,13 +34,11 @@ def main() -> None:
     status: bool = multiprocessing.Value(ctypes.c_bool, False)
 
     p1: multiprocessing.Process = multiprocessing.Process(
-        target=funcao1,
-        args=(valor, status)
+        target=funcao1, args=(valor, status)
     )
 
     p2: multiprocessing.Process = multiprocessing.Process(
-        target=funcao2,
-        args=(valor, status)
+        target=funcao2, args=(valor, status)
     )
 
     p1.start()

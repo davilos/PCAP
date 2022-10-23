@@ -11,7 +11,7 @@ def main() -> None:
     inicio: datetime.datetime = datetime.datetime.now()
 
     with Executor(max_workers=qtd_cores) as executor:
-        for n in range(1, qtd_cores+1):
+        for n in range(1, qtd_cores + 1):
             ini = 50_000_000 * (n - 1) / qtd_cores
             fim = 50_000_000 * n / qtd_cores
             print(f'Core {n} processando de {ini} até {fim}')

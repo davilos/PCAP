@@ -14,12 +14,10 @@ def main() -> None:
     queue: multiprocessing.Queue = multiprocessing.Queue()
 
     p1: multiprocessing.Process = multiprocessing.Process(
-        target=ping,
-        args=(queue,)
+        target=ping, args=(queue,)
     )
     p2: multiprocessing.Process = multiprocessing.Process(
-        target=pong,
-        args=(queue,)
+        target=pong, args=(queue,)
     )
 
     p1.start()

@@ -2,7 +2,7 @@ import multiprocessing
 
 
 def calcular(dado: int) -> int:
-    return dado ** 2
+    return dado**2
 
 
 def main() -> None:

@@ -12,7 +12,7 @@ def main() -> None:
     inicio: datetime.datetime = datetime.datetime.now()
 
     threads = []
-    for n in range(1, qtd_cores+1):
+    for n in range(1, qtd_cores + 1):
         ini = 50_000_000 * (n - 1) / qtd_cores
         fim = 50_000_000 * n / qtd_cores
         print(f'Core {n} processando de {ini} até {fim}')
@@ -20,7 +20,7 @@ def main() -> None:
             threading.Thread(
                 target=computar,
                 kwargs={'inicio': ini, 'fim': fim},
-                daemon=True
+                daemon=True,
             )
         )
 
