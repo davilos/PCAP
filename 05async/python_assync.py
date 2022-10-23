@@ -1,6 +1,6 @@
+import asyncio
 import datetime
 import math
-import asyncio
 
 
 def main() -> None:

@@ -1,8 +1,8 @@
 import time
-import colorama
-
-from threading import Thread
 from queue import Queue
+from threading import Thread
+
+import colorama
 
 
 def gerador_de_dados(queue: Queue) -> None:

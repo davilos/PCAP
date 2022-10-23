@@ -1,7 +1,8 @@
 import datetime
-import computa
 import multiprocessing
 from concurrent.futures.process import ProcessPoolExecutor as Executor
+
+import computa
 
 
 def main() -> None:

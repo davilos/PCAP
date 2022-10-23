@@ -1,6 +1,6 @@
+import ctypes
 import multiprocessing
 import time
-import ctypes
 
 
 def funcao1(val: int, stat: bool) -> None:

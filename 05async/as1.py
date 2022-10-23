@@ -1,5 +1,5 @@
-import datetime
 import asyncio
+import datetime
 
 
 async def gerar_dados(quantidade: int, dados: asyncio.Queue) -> None:

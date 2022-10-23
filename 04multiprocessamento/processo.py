@@ -1,5 +1,5 @@
-from typing import Union
 import multiprocessing
+from typing import Union
 
 print(
     f'Iniciando o processo com nome: {multiprocessing.current_process().name}'
